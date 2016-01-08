@@ -9,7 +9,7 @@ end
 
 # Routes
 get '/' do
-  @growls = session[:growls]
+  @all_growls = session[:growls]
 	erb :index
 end
 
