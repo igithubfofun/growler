@@ -2,7 +2,7 @@
 <h1>Welcome To Growler</h1>
 <ul>
   <% @all_growls.each do |growl| %>
-  <li><%= growl[0] %> <%= growl[1] %></li>
+  <li><a href="users/<%= growl[0] %>"><%= growl[0] %></a> <%= growl[1] %></li>
   <% end %>
 </ul>
 
