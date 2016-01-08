@@ -1,6 +1,11 @@
 <form action="/add" method="post">
 
-  <input type="text" name="user_growl">
+  <input type="text" name="user_name" value="<% if @error == true %><%= @name_before_error %><% end %>"><span>name</span>
+
+  <input type="text" name="user_growl"  value="<% if @error == true %><%= @growl_before_error %><% end %>"><span>growl</span>
+
   <input type="submit" value="GROWL!">
+
+  <p><%= @error_msg %></p>
 
 </form>
