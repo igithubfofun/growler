@@ -49,3 +49,13 @@ get '/logout' do
 
 end
 
+get '/users/:name' do
+  @name = params[:name]
+  erb :profile
+end
+
+
+
+
+
+
