@@ -1,13 +1,14 @@
-
 <h1>Welcome To Growler</h1>
+
+<a href="/add">Add new Growl</a>&nbsp;&nbsp;
+<a href="/clear">Clear History</a><br><br>
+
 <ul>
   <% @all_growls.each do |growl| %>
-  <li><a href="users/<%= growl[0] %>"><%= growl[0] %></a> <%= growl[1] %></li>
+  <li><a href="profile/<%= growl[0] %>"><%= growl[0] %></a> <%= growl[1] %></li>
   <% end %>
 </ul>
 
 
 
-<a href="/add">Add new Growl</a><br><br>
-<a href="/logout">Clear History</a><br><br>
 

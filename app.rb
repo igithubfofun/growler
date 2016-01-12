@@ -5,13 +5,11 @@ enable :sessions
 
 before do
   session[:growls] ||= []
-  session[:names] ||= []
 end
 
 # Routes
 get '/' do
   @all_growls = session[:growls]
-  @all_names = session[:names]
 	erb :index
 end
 
@@ -40,18 +38,18 @@ post '/add' do
   end
 end
 
-get '/logout' do
+get '/clear' do
 
     session.clear
     session[:@all_growls] = []
-    session[:@all_names] = []
-    erb :logout
+    erb :clear
 
 end
 
-get '/users/:name' do
+get '/profile/:name' do
   @name = params[:name]
   erb :profile
+
 end
 
 
